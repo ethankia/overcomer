@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Overcome Sin with Jesus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Jesus Loves You</h1>
+
+    <form id="journeyForm">
+      <label for="start-date">What day are you starting your journey?</label>
+      <input type="date" id="start-date" required />
+
+      <label for="sin">What sin are you overcoming?</label>
+      <select id="sin" required>
+        <option value="">Select one</option>
+        <option value="lust">Lust</option>
+        <option value="swearing">Swearing</option>
+        <option value="anger">Anger</option>
+        <option value="envy">Envy</option>
+        <option value="lying">Lying</option>
+        <option value="greed">Greed</option>
+        <option value="pride">Pride</option>
+        <option value="addiction">Addiction</option>
+      </select>
+
+      <button type="submit">Start Journey</button>
+    </form>
+
+    <div id="progressSection" class="hidden">
+      <h2>Progress</h2>
+      <p id="daysCount"></p>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <div id="verseSection">
+      <h2>Verse of the Day</h2>
+      <button onclick="showVerse()">Get Verse</button>
+      <p id="verseDisplay"></p>
+    </div>
+
+    <div id="journalSection">
+      <h2>Prayer Journal</h2>
+      <textarea id="journalEntry" rows="5" placeholder="Write your prayer..."></textarea>
+      <button onclick="saveJournal()">Save Entry</button>
+      <div id="journalStatus"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
